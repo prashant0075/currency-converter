@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
     <!-- this is main container -->
-    <div class="mainContainer">
+    <div class="main-container">
         <form action="submit">
+            <h2>Exchange</h2>
             <input type="text">
             <div class="select-container">
-                <select name="" id="">
+                <img src="https://flagsapi.com/BE/flat/64.png">
+                <select name="" id="fromCurr">
+                    <option value="IND">INR</option>
+                    <option value="IND">USD</option>
+                </select>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                <img src="https://flagsapi.com/BE/flat/64.png">
+                <select name="" id="toCurr">
                     <option value="IND">INR</option>
                     <option value="IND">USD</option>
                 </select>
             </div>
+            <div class="show">
+                <p>1usd = 80inr</p>
+            </div>
+            <button>Get Exchange</button>
         </form>
     </div>
     <script src="app.js"></script>
