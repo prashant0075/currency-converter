@@ -10,7 +10,7 @@ let fromImage = document.querySelector("#fromImg");
 let toImage  = document.querySelector("#toImg");
 let btn = document.querySelector("#btn");
 let input = document.querySelector("input");
-
+let msg = document.querySelector(".msg p");
 
 for(let dropDowns of select){
     for(c in countryList){
@@ -18,6 +18,8 @@ for(let dropDowns of select){
     element.innerText = c;
     element.value = countryList[c];
     dropDowns.append(element);
+         }
+    }
 
     from.addEventListener("change",()=>{
         fromImage.src = `https://flagsapi.com/${from.value}/flat/64.png`;
@@ -26,8 +28,7 @@ for(let dropDowns of select){
     to.addEventListener("change",()=>{
         toImage.src = `https://flagsapi.com/${to.value}/flat/64.png`;
     })
-}
-}
+
 
 const form = document.querySelector("form");
 form.addEventListener("submit",(e)=>{
@@ -37,7 +38,6 @@ form.addEventListener("submit",(e)=>{
         input.value = 1;
         input.innerText = 1;
     }
-    console.log(input.value)
     getData();
 })
 
@@ -46,8 +46,10 @@ async function getData(){
     let toCurr = to.selectedOptions[0].text;
     let a = await fetch(`https://latest.currency-api.pages.dev/v1/currencies/${curr.toLowerCase()}.json`);
     let b = await a.json();
-    console.log(b);
-    console.log(b[toCurr]);
+    let rate = b[curr.toLowerCase()][toCurr.toLowerCase()];
+    let amount = input.value;
+    let result = rate*amount;
+    msg.innerText = `${amount} ${curr} = ${result} ${toCurr}`;
 }
 
 

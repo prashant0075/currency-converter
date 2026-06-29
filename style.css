@@ -1,7 +1,11 @@
 *{
     padding: 0px;
     margin: 0px;
-   
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;;
+    text-align: center;
 }
 
 .main-container{
@@ -10,7 +14,7 @@
     justify-content: center;
     align-items: self-start;
     width: 40%;
-    margin-left: 30%;
+    margin: 30vw;
     margin-top: 15vh;
     height: 70vh;
     border: none;
@@ -52,6 +56,7 @@ form button{
 }
 form h2{
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 .select-container select{
     border: none;
@@ -68,4 +73,5 @@ form h2{
     display: flex;
     align-items: center;
      font-size:large;
+     color: white;
 }
