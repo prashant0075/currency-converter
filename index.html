@@ -10,29 +10,34 @@
 <body>
     <!-- this is main container -->
     <div class="main-container">
+        
         <form action="submit">
-            <h2>Exchange</h2>
+            <h2 >Exchange</h2>
             <input type="text">
             <div class="select-container">
-                <img src="https://flagsapi.com/BE/flat/64.png">
-                <select name="" id="fromCurr">
-                    <option value="IND">INR</option>
-                    <option value="IND">USD</option>
+                
+                <img  src="https://flagsapi.com/IN/flat/64.png" id="fromImg">
+                <select name="" id="fromCurr" class="select">
+                    <option value="IN" selected>INR</option>
                 </select>
+
                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                <img src="https://flagsapi.com/BE/flat/64.png">
-                <select name="" id="toCurr">
-                    <option value="IND">INR</option>
-                    <option value="IND">USD</option>
+
+                <img src="https://flagsapi.com/US/flat/64.png" id="toImg">
+                <select name="" id="toCurr" class="select">
+                    <option value="US">USD</option>
                 </select>
+                    
+                
             </div>
-            <div class="show">
+            <div class="msg">
                 <p>1usd = 80inr</p>
             </div>
-            <button>Get Exchange</button>
+            <button id="btn">Get Exchange</button>
         </form>
     </div>
-    <script src="app.js"></script>
     <script src="codes.js"></script>
+    <script src="app.js"></script>
+    
 </body>
 </html>
